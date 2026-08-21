@@ -1,0 +1,28 @@
+{
+  "id": "clear-auditable-radiology-foundation-model",
+  "title": "CLEAR: an auditable foundation model for radiology grounded in clinical concepts",
+  "authors": [
+    "Tianyu Han",
+    "Riga Wu",
+    "Yu Tian",
+    "Firas Khader",
+    "Lisa C. Adams",
+    "Keno K. Bressem",
+    "Christos Davatzikos",
+    "Jakob Nikolas Kather",
+    "Li Shen",
+    "David A. Mankoff",
+    "Eduardo Mortani Barbosa",
+    "Daniel Truhn"
+  ],
+  "venue": "Nature Biomedical Engineering",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41551-026-01741-4",
+  "abstract": "'Black box' deep learning models for medical image interpretation limit clinical trust and analysis of performance degradation. Here we introduce Concept-Level Embeddings for Auditable Radiology (CLEAR), an auditable foundation model based on clinical concepts. Trained on over 0.87 million image-report pairs from 239,391 patients, CLEAR learns a visual representation and projects chest X-rays into a semantically rich space defined by large language model embeddings, making every prediction decomposable into weighted contributions from individual radiological observations. External validation on four large, physician-annotated datasets from the United States, Europe and Asia shows that CLEAR not only achieves state-of-the-art classification performance but also enables applications: auditable zero-shot pathology detection, systematic identification of radiological confounders and the creation of expert-level concept bottleneck models from data-driven concepts. By integrating clinical knowledge directly into its reasoning process, CLEAR offers a framework for robust model auditing, safer deployment and enhanced physician-AI collaboration, advancing towards trustworthy medical AI.",
+  "axes": ["기관 간 일반화", "판독 근거의 설명가능성"],
+  "takeaway": "CLEAR는 흉부 X-ray를 임상 개념 공간에 투영해 예측을 개별 소견 기여도로 분해할 수 있는 감사 가능한 파운데이션 모델로, 4개 대륙의 외부 데이터셋에서 최고 수준의 분류 성능을 보였다.",
+  "relevance": "우리 코호트는 272건, 153명 규모로 No Finding(145건) 대비 Nodule(7건), Fibrosis(6건) 같은 희귀 소견이 극히 적고 다중 라벨 조합이 다수 존재해, 단일 기관 소규모 데이터에서 학습된 분류기의 신뢰도를 외부 검증 없이 판단하기 어렵다. CLEAR처럼 예측 근거를 개별 소견 기여도로 분해하는 구조는 우리 데이터처럼 라벨 조합이 복잡한 경우 오분류 원인을 소견 단위로 추적하는 데 참고할 수 있다.",
+  "caveat": "우리 데이터셋은 153명, 272건의 단일 기관 소규모 코호트로 CLEAR가 사용한 23만 명 이상의 다기관 데이터와 규모 차이가 크며, 외부 검증이나 개념 병목 모델 성능을 재현할 근거는 없다.",
+  "check": "CLEAR가 공개한 개념 임베딩 방식을 우리 코호트의 다중 라벨 소견(Effusion+Infiltration 등)에 적용했을 때 소견별 기여도가 임상적으로 타당한 패턴을 보이는지 확인할 가치가 있다."
+}
